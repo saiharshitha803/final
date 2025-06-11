@@ -1,0 +1,118 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e6ecf3,#5fb5f6);
+      padding: 50px 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3.2em;
+      color: #2c3e50;
+      margin-bottom: 50px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .card {
+      background: #f7f7f7;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: zoomIn 0.6s ease forwards;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(1.03em);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h2 {
+      font-size: 1.4em;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .card ul li::before {
+      content: "✔";
+      color: #3498db;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #6f85e9, #3498db);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .card {
+        padding: 20px;
+      }
+    }
