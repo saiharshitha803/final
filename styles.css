@@ -74,13 +74,13 @@
     .btn {
       display: inline-block;
       padding: 12px 25px;
-      background: linear-gradient(90deg, #3498db, #2ecc71);
+      background: linear-gradient(90deg, #3498db, #37d97b);
       color: white;
       text-decoration: none;
       border-radius: 30px;
       font-weight: 600;
       transition: background 0.3s ease;
-      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+      box-shadow: 0 4px 15px rgba(52, 152, 218, 0.3);
     }
 
     .btn:hover {
